@@ -1,0 +1,96 @@
+//Make a container flexy
+.flex {
+	display: flex;
+}
+
+//Stack flexy children on top of each other
+.stack {
+	flex-direction: column;
+}
+
+//Unstack and stack flexy children @ specified viewports
+.stack {
+	@at-root #{&}-384 {
+		@media (min-width: 384px) {
+			flex-direction: column;
+		}
+	}
+	@at-root #{&}-768 {
+		@media (min-width: 768px) {
+			flex-direction: column;
+		}
+	}
+	@at-root #{&}-1024 {
+		@media (min-width: 1024px) {
+			flex-direction: column;
+		}
+	}
+	@at-root #{&}-1280 {
+		@media (min-width: 1280px) {
+			flex-direction: column;
+		}
+	}
+	@at-root #{&}-1440 {
+		@media (min-width: 1440px) {
+			flex-direction: column;
+		}
+	}
+}
+.unstack {
+	@at-root #{&}-384 {
+		@media (min-width: 384px) {
+			flex-direction: row;
+		}
+	}
+	@at-root #{&}-768 {
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+	}
+	@at-root #{&}-1024 {
+		@media (min-width: 1024px) {
+			flex-direction: row;
+		}
+	}
+	@at-root #{&}-1280 {
+		@media (min-width: 1280px) {
+			flex-direction: row;
+		}
+	}
+	@at-root #{&}-1440 {
+		@media (min-width: 1440px) {
+			flex-direction: row;
+		}
+	}
+}
+
+//Make flexy children fluid
+.fluid {
+	flex: 1;
+}
+
+//Align inner-most children inside of their flexy parent containers
+.child {
+	@at-root #{&}-x {
+		@at-root #{&}-start {
+			justify-content: flex-start;
+		}
+		@at-root #{&}-center {
+			justify-content: center;
+		}
+		@at-root #{&}-end {
+			justify-content: flex-end;
+		}
+	}
+	@at-root #{&}-y {
+		@at-root #{&}-start {
+			align-items: flex-start;
+		}
+		@at-root #{&}-center {
+			align-items: center;
+		}
+		@at-root #{&}-end {
+			align-items: flex-end;
+		}
+	}
+}
