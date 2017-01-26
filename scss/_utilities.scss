@@ -14,17 +14,24 @@
 	}
 }
 
+//Clearfix
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 //Focus
 .focus {
 	@at-root #{&}-outline {
-		a:focus {
-			outline: 1px dashed;
-			outline-offset: 1px;
+		&:focus {
+			outline: 1px dashed !important;
+			outline-offset: 1px !important;
 		}
 	}
 	@at-root #{&}-underline {
-		a:focus {
-			text-decoration: underline;
+		&:focus {
+			text-decoration: underline !important;
 		}
 	}
 }
