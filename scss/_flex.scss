@@ -64,14 +64,20 @@
 	}
 }
 
-//Make flexy children fluid
-.fluid {
-	flex: 1;
+//Make flexy children fluid columns with 1em gutters
+.flex-grid {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	> * {
+		flex: 1;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
 }
 
 //Align inner-most children inside of their flexy parent containers
 .child {
-	@at-root #{&}-x {
+	@at-root #{&}-main {
 		@at-root #{&}-start {
 			justify-content: flex-start;
 		}
@@ -81,8 +87,14 @@
 		@at-root #{&}-end {
 			justify-content: flex-end;
 		}
+		@at-root #{&}-space-between {
+			justify-content: space-between;
+		}
+		@at-root #{&}-space-around {
+			justify-content: space-around;
+		}
 	}
-	@at-root #{&}-y {
+	@at-root #{&}-cross {
 		@at-root #{&}-start {
 			align-items: flex-start;
 		}
@@ -92,5 +104,15 @@
 		@at-root #{&}-end {
 			align-items: flex-end;
 		}
+		@at-root #{&}-stretch {
+			align-items: stretch;
+		}
 	}
+}
+
+
+//Make flexy children fluid
+.grow {
+	flex: 1;
+	height: auto;
 }
