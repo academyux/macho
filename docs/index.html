@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Macho</title>
+	<link rel="stylesheet" href="../macho.min.css">
+	<link rel="stylesheet" href="dist/demo.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:400,700" rel="stylesheet">
+</head>
+<body>
+	<main id="macho">
+		<h1 class="sr-only">macho.min.css</h1>
+		<aside id="macho-sidebar" class="flex stack child-main-space-between">
+			<nav class="flex stack child-cross-center p-l2 p-t2">
+				<a id="logo" href="/docs"><pre><code>macho.min.css</code></pre></a>
+			</nav>
+		</aside>
+		<section id="layout">
+			<h2 class="sr-only"><strong>layout</strong></h2>
+			<div id="flex" class="macho-class flex stack m-b2">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>flex</code></pre>
+					<div class="def-summary">make an element flexy</div>
+					<ul class="def-details">
+						<li>Child elements will be displayed from right to left inside the flexy parent</li>
+						<li>By default flexy children will all try to fit onto one line</li>
+					</ul>
+				</div class="macho-def-example">
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#flex -->
+			<div id="stack" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>stack</code></pre>
+					<div class="def-summary">display children from top to bottom in a column</div>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex stack"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#stack -->
+			<div id="stack-at" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>stack-[variable]</code></pre>
+					<div class="def-summary">Stack children at a specified viewport width</div>
+					<ul class="def-details unlist">
+						<li><pre><code>stack-384</code></pre>stack children at 384px</li>
+						<li><pre><code>stack-768</code></pre>stack children at 768px</li>
+						<li><pre><code>stack-1024</code></pre>stack children at 1024px</li>
+						<li><pre><code>stck-1280</code></pre>stack children at 1280px</li>
+						<li><pre><code>stack-1440</code></pre>stack children at 1440px</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex stack-768"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#stack-at -->
+			<div id="unstack-at" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>unstack-[variable]</code></pre>
+					<div class="def-summary">Unstack children at a specified viewport width</div>
+					<ul class="def-details unlist">
+						<li><pre><code>unstack-384</code></pre>unstack children at 384px</li>
+						<li><pre><code>unstack-768</code></pre>unstack children at 768px</li>
+						<li><pre><code>unstack-1024</code></pre>unstack children at 1024px</li>
+						<li><pre><code>unstack-1280</code></pre>unstack children at 1280px</li>
+						<li><pre><code>unstack-1440</code></pre>unstack children at 1440px</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex unstack-1024"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#unstack-at -->
+			<div id="child-main-at" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>child-main-[variable]</code></pre>
+					<div class="def-summary">Align chilren along the main axis</div>
+					<ul class="def-details unlist">
+						<li><pre><code>center</code></pre> children are centered on the main axis</li>
+						<li><pre><code>end</code></pre> children are packed towards the end of the main axis</li>
+						<li><pre><code>space-around</code></pre> children are evenly distributed on the main axis with equal space around them</li>
+						<li><pre><code>space-between</code></pre> children are evenly distributed on the main axis; first child is at the start, last child is at the end</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex child-main-center"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#child-main-at -->
+			<div id="child-cross-at" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>child-cross-[variable]</code></pre>
+					<div class="def-summary">Align chilren along the cross axis</div>
+					<ul class="def-details unlist">
+						<li><pre><code>start</code></pre> children packed towards the start of cross axis</li>
+						<li><pre><code>center</code></pre> children are centered on the cross axis</li>
+						<li><pre><code>end</code></pre> children are packed towards the end of the cross axis</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex child-cross-center"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#child-cross-at -->
+			<div id="grow" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>grow</code></pre>
+					<div class="def-summary">Make flexy children expand to fill the main axis of their parent</div>
+					<ul class="def-details">
+						<li>If multiple siblings exist, their size will distribute equally inside of their parent.</li>
+						<li>Example: Four <pre><code>grow</code></pre> elements will all have a width of 25% of their parent's width—unless stacked, in which their heights would be 25% of their parent's height.</li>
+						<li>NOTE: Stacked <pre><code>grow</code></pre> element(s) or their parent MUST have a declared or inherited height or else they will collapse.</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="flex"&gt;
+	&lt;div class="grow"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#grow -->
+			<div id="layout-demo">
+				<header class="flex child-main-space-between child-cross-center p-1">
+					<pre id="layout-demo-class" class="flex grow">
+						<code>.flex</code>
+					</pre>
+					<div id="layout-demo-controls" class="flex child-cross-center grow">
+						<label for="toggle-stack">
+							<input id="toggle-stack" type="checkbox">
+							<span>stack</span>
+						</label>
+						<select id="select-child-main" name="select-child-main">
+							<option value="">child-main-default</option>
+							<option value="child-main-center">child-main-center</option>
+							<option value="child-main-end">child-main-end</option>
+							<option value="child-main-space-around">child-main-space-around</option>
+							<option value="child-main-space-between">child-main-space-between</option>
+						</select>
+						<select id="select-child-cross" name="select-child-cross" >
+							<option value="">child-cross-default</option>
+							<option value="child-cross-start">child-cross-start</option>
+							<option value="child-cross-center">child-cross-center</option>
+							<option value="child-cross-end">child-cross-end</option>
+						</select>
+					</div>
+					<!-- /#layout-demo-controls -->
+				</header>
+				<!-- /header -->
+				<div id="layout-demo-canvas" class="flex">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<!-- /#demo-example -->
+			</div>
+			<!-- /#layout-demo -->
+		</section>
+		<!-- /#layout -->
+
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="dist/prism.min.js"></script>
+	<script>
+		$(function() {
+
+			$('#toggle-stack, #select-child-main, #select-child-cross').change(function() {
+				var mainVal = $('#select-child-main').val();
+				var crossVal = $('#select-child-cross').val();
+
+				if ( $('#toggle-stack').is(':checked') ) {
+					
+					if ( !mainVal == '' && !crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex.stack' + '.' + mainVal + '.' + crossVal);
+						$('#layout-demo-canvas').attr('class', 'flex stack' + ' ' + mainVal + ' ' + crossVal);
+					} else if ( !mainVal == '' && crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex.stack' + '.' + mainVal);
+						$('#layout-demo-canvas').attr('class', 'flex stack' + ' ' + mainVal);
+					} else if ( mainVal == '' && !crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex.stack' + '.' + crossVal);
+						$('#layout-demo-canvas').attr('class', 'flex stack' + ' ' + crossVal);
+					} else {
+						$('#layout-demo-class code').text('.flex.stack');
+						$('#layout-demo-canvas').attr('class', 'flex stack');
+					}
+
+				} else {
+					if ( !mainVal == '' && !crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex' + '.' + mainVal + '.' + crossVal);
+						$('#layout-demo-canvas').attr('class', 'flex' + ' ' + mainVal + ' ' + crossVal);
+					} else if ( !mainVal == '' && crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex' + '.' + mainVal);
+						$('#layout-demo-canvas').attr('class', 'flex' + ' ' + mainVal);
+					} else if ( mainVal == '' && !crossVal == '' ) {
+						$('#layout-demo-class code').text('.flex' + '.' + crossVal);
+						$('#layout-demo-canvas').attr('class', 'flex' + ' ' + crossVal);
+					} else {
+						$('#layout-demo-class code').text('.flex');
+						$('#layout-demo-canvas').attr('class', 'flex');
+					}
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>
