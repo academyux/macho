@@ -17,7 +17,7 @@
 		</aside>
 		<section id="layout">
 			<h2 class="sr-only"><strong>layout</strong></h2>
-			<div id="flex" class="macho-class flex stack m-b2">
+			<div id="flex" class="macho-class flex stack">
 				<div class="macho-class-def">
 					<pre class="def-class" rel="css"><code>flex</code></pre>
 					<div class="def-summary">make an element flexy</div>
@@ -146,6 +146,192 @@
 			<!-- /#layout-demo -->
 		</section>
 		<!-- /#layout -->
+
+		<section id="utilities">
+
+			<div id="bg-color" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>bg-[variable]</code></pre>
+					<div class="def-summary">Apply a specified background color to an element</div>
+					<ul class="def-details unlist">
+						<li><pre><code>red</code></pre>make an element's background red</li>
+						<li><pre><code>blue</code></pre>make an element's background blue</li>
+						<li><pre><code>gray</code></pre>make an element's background gray</li>
+						<li><pre><code>white</code></pre>make an element's background white</li>
+						<li><pre><code>yellow</code></pre>make an element's background yellow</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="bg-red"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#bg-color -->
+
+			<div id="clearfix" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>cf</code></pre>
+					<div class="def-summary">Clear floated child elements</div>
+				</div class="macho-def-example">
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="cf"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#clearfix -->
+
+			<div id="img-fluid" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>img-fluid</code></pre>
+					<div class="def-summary">Make an image fluid and proportionally fill its parent's width</div>
+				</div class="macho-def-example">
+				<pre class="macho-class-example"><code class="language-markup">&lt;img class="img-fluid" src="..." /&gt;</code></pre>
+			</div>
+			<!-- /#img-fluid -->
+
+			<div id="focus-states" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>focus-[variable]</code></pre>
+					<div class="def-summary">Apply specified focus state to controls</div>
+					<ul class="def-details unlist">
+						<li><pre><code>outline</code></pre>dashed outline element when focused</li>
+						<li><pre><code>underline</code></pre>underline text when focused</li>
+					</ul>
+					<ul class="def-details">
+						<li>Can be applied to parent element of multiple controls</li>
+						<li>Outline and underline color will be the current text color of the focused element</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;a class="focus-outline" href="..."&gt;...&lt;/a&gt;</code></pre>
+			</div>
+			<!-- /#focus-states -->
+
+			<div id="unlist" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>unlist</code></pre>
+					<div class="def-summary">Remove default browser styles from lists</div>
+				</div class="macho-def-example">
+				<pre class="macho-class-example"><code class="language-markup">&lt;ul class="unlist"&gt;...&lt;/ul&gt;</code></pre>
+			</div>
+			<!-- /#unlist -->
+
+			<div id="margin" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>m-[variable]</code></pre>
+					<div class="def-summary">Apply specified margin to an element</div>
+					<ul class="def-details unlist">
+						<li><pre><code>t0</code></pre>margin-top: 0</li>
+						<li><pre><code>t_5</code></pre>margin-top: 0.5em</li>
+						<li><pre><code>t1</code></pre>margin-top: 1em</li>
+						<li><pre><code>t2</code></pre>margin-top: 2em</li>
+						<li><pre><code>rauto</code></pre>margin-right: auto</li>
+						<li><pre><code>r0</code></pre>margin-right: 0</li>
+						<li><pre><code>r_5</code></pre>margin-right: 0.5em</li>
+						<li><pre><code>r1</code></pre>margin-right: 1em</li>
+						<li><pre><code>r2</code></pre>margin-right: 2em</li>
+						<li><pre><code>b0</code></pre>margin-bottom: 0</li>
+						<li><pre><code>b_5</code></pre>margin-bottom: 0.5em</li>
+						<li><pre><code>b1</code></pre>margin-bottom: 1em</li>
+						<li><pre><code>b2</code></pre>margin-bottom: 2em</li>
+						<li><pre><code>lauto</code></pre>margin-left: auto</li>
+						<li><pre><code>l0</code></pre>margin-left: 0</li>
+						<li><pre><code>l_5</code></pre>margin-left: 0.5em</li>
+						<li><pre><code>l1</code></pre>margin-left: 1em</li>
+						<li><pre><code>l2</code></pre>margin-left: 2em</li>
+						<li><pre><code>0</code></pre>margin: 0</li>
+						<li><pre><code>_5</code></pre>margin: 0.5em</li>
+						<li><pre><code>1</code></pre>margin: 1em</li>
+						<li><pre><code>2</code></pre>margin: 2em</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="m-t1 m-r2 m-b1 m-l2"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#margin -->
+
+			<div id="max-widths" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>mxw-[variable]</code></pre>
+					<div class="def-summary">Apply specified max-width to an element</div>
+					<ul class="def-details unlist">
+						<li><pre><code>384</code></pre>max-width: 384px</li>
+						<li><pre><code>768</code></pre>max-width: 768px</li>
+						<li><pre><code>1024</code></pre>max-width: 1024px</li>
+						<li><pre><code>1280</code></pre>max-width: 1280px</li>
+						<li><pre><code>1440</code></pre>max-width: 1440px</li>
+					</ul>
+					<ul class="def-details">
+						<li>Use <pre><code>m-lauto m-rauto</code></pre> if you need to center on screen</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="mxw-1440 m-lauto m-rauto"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#max-widths -->
+
+			<div id="padding" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>p-[variable]</code></pre>
+					<div class="def-summary">Apply specified padding to an element</div>
+					<ul class="def-details unlist">
+						<li><pre><code>t0</code></pre>padding-top: 0</li>
+						<li><pre><code>t_5</code></pre>padding-top: 0.5em</li>
+						<li><pre><code>t1</code></pre>padding-top: 1em</li>
+						<li><pre><code>t2</code></pre>padding-top: 2em</li>
+						<li><pre><code>r0</code></pre>padding-right: 0</li>
+						<li><pre><code>r_5</code></pre>padding-right: 0.5em</li>
+						<li><pre><code>r1</code></pre>padding-right: 1em</li>
+						<li><pre><code>r2</code></pre>padding-right: 2em</li>
+						<li><pre><code>b0</code></pre>padding-bottom: 0</li>
+						<li><pre><code>b_5</code></pre>padding-bottom: 0.5em</li>
+						<li><pre><code>b1</code></pre>padding-bottom: 1em</li>
+						<li><pre><code>b2</code></pre>padding-bottom: 2em</li>
+						<li><pre><code>l0</code></pre>padding-left: 0</li>
+						<li><pre><code>l_5</code></pre>padding-left: 0.5em</li>
+						<li><pre><code>l1</code></pre>padding-left: 1em</li>
+						<li><pre><code>l2</code></pre>padding-left: 2em</li>
+						<li><pre><code>0</code></pre>padding: 0</li>
+						<li><pre><code>_5</code></pre>padding: 0.5em</li>
+						<li><pre><code>1</code></pre>padding: 1em</li>
+						<li><pre><code>2</code></pre>padding: 2em</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;div class="p-_5"&gt;...&lt;/div&gt;</code></pre>
+			</div>
+			<!-- /#padding -->
+
+			<div id="type" class="macho-class flex stack">
+				<div class="macho-class-def">
+					<pre class="def-class" rel="css"><code>t-[variable]</code></pre>
+					<div class="def-summary">Apply specified text color</div>
+					<ul class="def-details unlist">
+						<li><pre><code>red</code></pre>color: #ee0000</li>
+						<li><pre><code>blue</code></pre>color: #0055a6</li>
+						<li><pre><code>white</code></pre>color: #ffffff</li>
+						<li><pre><code>gray</code></pre>color: #787678</li>
+						<li><pre><code>black</code></pre>color: #333333</li>
+					</ul>
+					<div class="def-summary">Apply a specified case</div>
+					<ul class="def-details unlist">
+						<li><pre><code>uppercase</code></pre>transform all text to uppercase</li>
+						<li><pre><code>capitalize</code></pre>transform all text to title case</li>
+					</ul>
+					<div class="def-summary">Justify text in a specified direction</div>
+					<ul class="def-details unlist">
+						<li><pre><code>center</code></pre>center text</li>
+						<li><pre><code>right</code></pre>right align text</li>
+					</ul>
+					<div class="def-summary">Apply default font-size (1em)</div>
+					<ul class="def-details unlist">
+						<li><pre><code>1em</code></pre>font-size: 1em</li>
+					</ul>
+					<div class="def-summary">Apply specified font-weight</div>
+					<ul class="def-details unlist">
+						<li><pre><code>medium</code></pre>font-weight: 500</li>
+						<li><pre><code>normal</code></pre>font-weight: normal</li>
+					</ul>
+					<ul class="def-details">
+						<li>Styles will cascade to children if no other styles take precedents</li>
+					</ul>
+				</div>
+				<pre class="macho-class-example"><code class="language-markup">&lt;h2 class="t-gray t-capitalize t-center t-1em t-medium"&gt;...&lt;/h2&gt;</code></pre>
+			</div>
+			<!-- /#type -->
+
+		</section>
+		<!-- /#utilities -->
 
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
