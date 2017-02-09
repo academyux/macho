@@ -40,18 +40,7 @@
 	flex-direction: row;
 }
 
-//Make flexy children fluid columns with 1em gutters
-.flex-grid {
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-	> * {
-		flex: 1;
-		margin-left: 0.5em;
-		margin-right: 0.5em;
-	}
-}
-
-//Align inner-most children inside of their flexy parent containers
+//Align direct children inside of their flexy parent containers
 .child {
 	@at-root #{&}-main {
 		@at-root #{&}-start {
@@ -87,7 +76,7 @@
 }
 
 
-//Make flexy children fluid
+//Make flexy children grow to fill as much of their parent container along main axis as possible
 .grow {
 	flex: 1;
 	height: auto;
