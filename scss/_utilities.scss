@@ -141,16 +141,16 @@
 //Max Widths
 .mxw {
 	@at-root #{&}-768 {
-		max-width: 48em;
+		max-width: 768px;
 	}
 	@at-root #{&}-1024 {
-		max-width: 64em;
+		max-width: 1024px;
 	}
 	@at-root #{&}-1280 {
-		max-width: 80em;
+		max-width: 1280px;
 	}
 	@at-root #{&}-1440 {
-		max-width: 90em;
+		max-width: 1440px;
 	}
 }
 
