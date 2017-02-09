@@ -74,6 +74,12 @@ section h2 {
 .def-summary + .def-details {
 	margin-top: 0.5em;
 }
+.def-details + .def-details {
+	margin-top: 1em;
+}
+.def-details + .def-summary {
+	margin-top: 1.5em;
+}
 .def-details {
 	color: #787678;
 	margin-top: 0;
