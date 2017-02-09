@@ -9,73 +9,38 @@
 }
 
 //Unstack and stack flexy children @ specified viewports
-.stack {
-	@at-root #{&}-384 {
-		@media (min-width: 384px) {
-			flex-direction: column;
-		}
-	}
-	@at-root #{&}-768 {
-		@media (min-width: 768px) {
-			flex-direction: column;
-		}
-	}
-	@at-root #{&}-1024 {
-		@media (min-width: 1024px) {
-			flex-direction: column;
-		}
-	}
-	@at-root #{&}-1280 {
-		@media (min-width: 1280px) {
-			flex-direction: column;
-		}
-	}
-	@at-root #{&}-1440 {
-		@media (min-width: 1440px) {
-			flex-direction: column;
-		}
-	}
+.stack-384 {
+	flex-direction: column;
 }
-.unstack {
-	@at-root #{&}-384 {
-		@media (min-width: 384px) {
-			flex-direction: row;
-		}
-	}
-	@at-root #{&}-768 {
-		@media (min-width: 768px) {
-			flex-direction: row;
-		}
-	}
-	@at-root #{&}-1024 {
-		@media (min-width: 1024px) {
-			flex-direction: row;
-		}
-	}
-	@at-root #{&}-1280 {
-		@media (min-width: 1280px) {
-			flex-direction: row;
-		}
-	}
-	@at-root #{&}-1440 {
-		@media (min-width: 1440px) {
-			flex-direction: row;
-		}
-	}
+.unstack-384 {
+	flex-direction: row;
+}
+.stack-768 {
+	flex-direction: column;
+}
+.unstack-768 {
+	flex-direction: row;
+}
+.stack-1024 {
+	flex-direction: column;
+}
+.unstack-1024 {
+	flex-direction: row;
+}
+.stack-1280 {
+	flex-direction: column;
+}
+.unstack-1280 {
+	flex-direction: row;
+}
+.stack-1440 {
+	flex-direction: column;
+}
+.unstack-1440 {
+	flex-direction: row;
 }
 
-//Make flexy children fluid columns with 1em gutters
-.flex-grid {
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-	> * {
-		flex: 1;
-		margin-left: 0.5em;
-		margin-right: 0.5em;
-	}
-}
-
-//Align inner-most children inside of their flexy parent containers
+//Align direct children inside of their flexy parent containers
 .child {
 	@at-root #{&}-main {
 		@at-root #{&}-start {
@@ -111,7 +76,7 @@
 }
 
 
-//Make flexy children fluid
+//Make flexy children grow to fill as much of their parent container along main axis as possible
 .grow {
 	flex: 1;
 	height: auto;

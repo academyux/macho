@@ -8,6 +8,9 @@ body {
 	line-height: 1.5;
 	font-family: 'Roboto', sans-serif;
 }
+pre {
+	white-space: nowrap;
+}
 #macho {
 	max-width: 1920px;
 	padding-left: 16em;
@@ -133,6 +136,20 @@ code {
 		flex: 1;
 		margin-left: 1em;
 	}
+}
+#select-child-main,
+#select-child-cross {
+	font-family: 'Robot', sans-serif;
+	font-size: 1em;
+	height: 2.5em;
+}
+#select-child-main {
+	background: gold;
+	border-color: gold;
+}
+#select-child-cross {
+	background: chartreuse;
+	border-color: chartreuse;
 }
 #layout-demo-canvas {
 	height: 30em;
