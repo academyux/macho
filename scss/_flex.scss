@@ -9,35 +9,45 @@
 }
 
 //Unstack and stack flexy children @ specified viewports
-.stack-384 {
-	flex-direction: column;
+@media (min-width: 384px) {
+	.stack-384 {
+		flex-direction: column;
+	}
+	.unstack-384 {
+		flex-direction: row;
+	}
 }
-.unstack-384 {
-	flex-direction: row;
+@media (min-width: 768px) {
+	.stack-768 {
+		flex-direction: column;
+	}
+	.unstack-768 {
+		flex-direction: row;
+	}
 }
-.stack-768 {
-	flex-direction: column;
+@media (min-width: 1024px) {
+	.stack-1024 {
+		flex-direction: column;
+	}
+	.unstack-1024 {
+		flex-direction: row;
+	}
 }
-.unstack-768 {
-	flex-direction: row;
+@media (min-width: 1280px) {
+	.stack-1280 {
+		flex-direction: column;
+	}
+	.unstack-1280 {
+		flex-direction: row;
+	}
 }
-.stack-1024 {
-	flex-direction: column;
-}
-.unstack-1024 {
-	flex-direction: row;
-}
-.stack-1280 {
-	flex-direction: column;
-}
-.unstack-1280 {
-	flex-direction: row;
-}
-.stack-1440 {
-	flex-direction: column;
-}
-.unstack-1440 {
-	flex-direction: row;
+@media (min-width: 1440px) {
+	.stack-1440 {
+		flex-direction: column;
+	}
+	.unstack-1440 {
+		flex-direction: row;
+	}
 }
 
 //Align direct children inside of their flexy parent containers
