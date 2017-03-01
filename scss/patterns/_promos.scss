@@ -1,0 +1,145 @@
+//BOXY & BLOCKY PROMOS
+@mixin blocky($color) {
+	background: $color;
+	&:hover {
+		background: lighten($color, 5%);
+		text-decoration: none;
+	}
+}
+@mixin boxy($color) {
+	border: 0.5em solid $color;
+	transition: border-color 0.1s ease-in;
+	&:hover {
+		border-color: darken($color, 5%);
+		text-decoration: none;
+		transition: border-color 0.1s ease-out;
+	}
+}
+[class*="promo-boxy-"],
+[class*="promo-blocky-"] {
+	cursor: pointer;
+}
+.promo-boxy {
+	@at-root #{&}-blue {
+		@include boxy($blue);
+	}
+	@at-root #{&}-red {
+		@include boxy($red);
+	}
+	@at-root #{&}-gray {
+		@include boxy($gray-light);
+	}
+	@at-root #{&}-sf-lime {
+		@include boxy(#D7DF21);
+	}
+	@at-root #{&}-sf-green {
+		@include boxy(#476E76);
+	}
+	@at-root #{&}-sf-gray {
+		@include boxy(#796E80);
+	}
+	@at-root #{&}-rl-red {
+		@include boxy(#F15A4F);
+	}
+	@at-root #{&}-rl-blue {
+		@include boxy(#009DAE);
+	}
+	@at-root #{&}-rl-orange {
+		@include boxy(#FFCB08);
+	}
+	@at-root #{&}-fs-orange {
+		@include boxy(#E07203);
+	}
+	@at-root #{&}-fs-green {
+		@include boxy(#629D94);
+	}
+	@at-root #{&}-fs-tan {
+		@include boxy(#CDB8A3);
+	}
+}
+.promo-blocky {
+	@at-root #{&}-blue {
+		@include blocky($blue);
+	}
+	@at-root #{&}-red {
+		@include blocky($red);
+	}
+	@at-root #{&}-gray {
+		@include blocky($gray-light);
+	}
+	@at-root #{&}-sf-lime {
+		@include blocky(#D7DF21);
+	}
+	@at-root #{&}-sf-green {
+		@include blocky(#476E76);
+	}
+	@at-root #{&}-sf-gray {
+		@include blocky(#796E80);
+	}
+	@at-root #{&}-rl-red {
+		@include blocky(#F15A4F);
+	}
+	@at-root #{&}-rl-blue {
+		@include blocky(#009DAE);
+	}
+	@at-root #{&}-rl-orange {
+		@include blocky(#FFCB08);
+	}
+	@at-root #{&}-fs-orange {
+		@include blocky(#E07203);
+	}
+	@at-root #{&}-fs-green {
+		@include blocky(#629D94);
+	}
+	@at-root #{&}-fs-tan {
+		@include blocky(#CDB8A3);
+	}
+}
+
+//WARP ZONE
+.promo-warpzone {
+	background: #ffffff;
+	position: relative;
+	transition: box-shadow 0.2s ease-out;
+}
+.promo-warpzone-links {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	a:focus {
+		outline: none !important;
+		text-decoration: underline;
+  }
+  .promo-warpzone-toggle {
+		font-weight: bold;
+		line-height: 1;
+		margin: 0.5em;
+		opacity: 0.75;
+		padding: 0.5em;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-decoration: none !important;
+		top: 0;
+		width: 2em;
+		&:focus,
+		&:hover{
+			opacity: 1;
+		}
+		&:focus{
+			outline: 0.0625em dashed !important;
+		}
+	}
+}
+.promo-warpzone.toggled .promo-warpzone-links {
+	opacity: 0.9;
+	z-index: 1;
+}
