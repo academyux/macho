@@ -2,7 +2,7 @@
 .bg {
 	//Primary Colors
 	@at-root #{&}-red {
-		background: $red;
+		background: $red-light;
 	}
 	@at-root #{&}-blue {
 		background: $blue;
