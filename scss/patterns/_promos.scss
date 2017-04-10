@@ -1,11 +1,4 @@
-//BOXY & BLOCKY PROMOS
-@mixin blocky($color) {
-	background: $color;
-	&:hover {
-		background: lighten($color, 5%);
-		text-decoration: none;
-	}
-}
+//BOXY
 @mixin boxy($color) {
 	border: 0.5em solid $color;
 	transition: border-color 0.1s ease-in;
@@ -15,8 +8,7 @@
 		transition: border-color 0.1s ease-out;
 	}
 }
-[class*="promo-boxy-"],
-[class*="promo-blocky-"] {
+[class*="promo-boxy-"] {
 	cursor: pointer;
 }
 .promo-boxy {
@@ -58,44 +50,6 @@
 	}
 	@at-root #{&}-fs-tan {
 		@include boxy(#CDB8A3);
-	}
-}
-.promo-blocky {
-	@at-root #{&}-blue {
-		@include blocky($blue);
-	}
-	@at-root #{&}-red {
-		@include blocky($red);
-	}
-	@at-root #{&}-gray {
-		@include blocky($gray-light);
-	}
-	@at-root #{&}-sf-lime {
-		@include blocky(#D7DF21);
-	}
-	@at-root #{&}-sf-green {
-		@include blocky(#476E76);
-	}
-	@at-root #{&}-sf-gray {
-		@include blocky(#796E80);
-	}
-	@at-root #{&}-rl-red {
-		@include blocky(#F15A4F);
-	}
-	@at-root #{&}-rl-blue {
-		@include blocky(#009DAE);
-	}
-	@at-root #{&}-rl-gold {
-		@include blocky(#FFCB08);
-	}
-	@at-root #{&}-fs-orange {
-		@include blocky(#E07203);
-	}
-	@at-root #{&}-fs-green {
-		@include blocky(#629D94);
-	}
-	@at-root #{&}-fs-tan {
-		@include blocky(#CDB8A3);
 	}
 }
 
@@ -150,7 +104,7 @@
 //PROMO DOTS
 .promo-dot {
 	align-items: center;
-	background: #ee0000;
+	background: $red;
 	border-radius: 50%;
 	color: #ffffff;
 	display: flex;
