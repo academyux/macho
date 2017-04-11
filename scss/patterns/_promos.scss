@@ -62,15 +62,13 @@
 .promo-warpzone-links {
 	align-items: center;
 	bottom: 0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	left: 0;
-	opacity: 0;
 	padding: 1em;
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: -1;
 	a:focus {
 		outline: none !important;
 		text-decoration: underline;
@@ -97,8 +95,7 @@
 	}
 }
 .promo-warpzone.toggled .promo-warpzone-links {
-	opacity: 0.95;
-	z-index: 1;
+	display: flex;
 }
 
 //PROMO DOTS
