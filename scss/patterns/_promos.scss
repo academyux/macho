@@ -1,15 +1,10 @@
 //BOXY
 @mixin boxy($color) {
-	border: 0.5em solid $color;
-	transition: border-color 0.1s ease-in;
+	border: .5em solid $color;
 	&:hover {
 		border-color: darken($color, 5%);
 		text-decoration: none;
-		transition: border-color 0.1s ease-out;
 	}
-}
-[class*="promo-boxy-"] {
-	cursor: pointer;
 }
 .promo-boxy {
 	@at-root #{&}-blue {
@@ -22,7 +17,7 @@
 		@include boxy($gray-light);
 	}
 	@at-root #{&}-white {
-		@include boxy(#ffffff);
+		@include boxy($white);
 	}
 	@at-root #{&}-sf-lime {
 		@include boxy(#D7DF21);
@@ -55,9 +50,7 @@
 
 //WARP ZONE
 .promo-warpzone {
-	background: #ffffff;
 	position: relative;
-	transition: box-shadow 0.2s ease-out;
 }
 .promo-warpzone-links {
 	align-items: center;
@@ -76,21 +69,16 @@
 	.promo-warpzone-toggle {
 		font-weight: bold;
 		line-height: 1;
-		margin: 0.5em;
-		opacity: 0.75;
-		padding: 0.5em;
+		margin: .5em;
+		padding: .5em;
 		position: absolute;
 		right: 0;
 		text-align: center;
 		text-decoration: none !important;
 		top: 0;
 		width: 2em;
-		&:focus,
-		&:hover{
-			opacity: 1;
-		}
 		&:focus{
-			outline: 0.0625em dashed !important;
+			outline: .0625em dashed !important;
 		}
 	}
 }
@@ -103,7 +91,7 @@
 	align-items: center;
 	background: $red;
 	border-radius: 50%;
-	color: #ffffff;
+	color: $white;
 	display: flex;
 	flex-flow: column;
 	height: 9.5em;
@@ -112,12 +100,11 @@
 	padding: 1em 1em 1.25em;
 	position: relative;
 	text-align: center;
-	transition: all 0.15s ease-out;
 	width: 9.5em;
 	strong:first-of-type {
 		display: flex;
 		flex-flow: column;
-		margin-bottom: 0.25em;
+		margin-bottom: .25em;
 		text-transform: uppercase;
 		width: 100%;
 	}
@@ -125,8 +112,7 @@
 		font-size: 2em;
 	}
 	strong + span {
-		font-weight: 500;
-		margin-top: 0.25em;
+		margin-top: .25em;
 	}
 	@at-root #{&}-split {
 		@extend .promo-dot;
@@ -134,11 +120,10 @@
 		strong:first-of-type {
 			margin-bottom: 0;
 			&:after{
-				border-top: 0.25em solid #ffffff;
+				border-top: .25em solid $white;
 				content: '';
-				height: 0.25em;
-				margin-top: 0.5em;
-				margin-bottom: 0.5em;
+				height: .25em;
+				margin: .5em 0;
 				width: 100%;
 			}
 		}
