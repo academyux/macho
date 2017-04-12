@@ -11,7 +11,7 @@
 		background: $gray-light;
 	}
 	@at-root #{&}-white {
-		background: white;
+		background: $white;
 	}
 	@at-root #{&}-yellow {
 		background: $yellow;
@@ -64,13 +64,13 @@
 .focus {
 	@at-root #{&}-outline {
 		&:focus {
-			outline: 0.0625em dashed !important;
-			outline-offset: 0.0625em !important;
+			outline: .0625em dashed !important;
+			outline-offset: .0625em !important;
 			text-decoration: none;
 		}
 		a:focus {
-			outline: 0.0625em dashed !important;
-			outline-offset: 0.0625em !important;
+			outline: .0625em dashed !important;
+			outline-offset: .0625em !important;
 			text-decoration: none;
 		}
 	}
@@ -91,7 +91,7 @@
 		margin-top: 0;
 	}
 	@at-root #{&}-t_5 {
-		margin-top: 0.5em;
+		margin-top: .5em;
 	}
 	@at-root #{&}-t1 {
 		margin-top: 1em;
@@ -107,7 +107,7 @@
 		margin-right: 0;
 	}
 	@at-root #{&}-r_5 {
-		margin-right: 0.5em;
+		margin-right: .5em;
 	}
 	@at-root #{&}-r1 {
 		margin-right: 1em;
@@ -120,7 +120,7 @@
 		margin-bottom: 0;
 	}
 	@at-root #{&}-b_5 {
-		margin-bottom: 0.5em;
+		margin-bottom: .5em;
 	}
 	@at-root #{&}-b1 {
 		margin-bottom: 1em;
@@ -136,7 +136,7 @@
 		margin-left: 0;
 	}
 	@at-root #{&}-l_5 {
-		margin-left: 0.5em;
+		margin-left: .5em;
 	}
 	@at-root #{&}-l1 {
 		margin-left: 1em;
@@ -149,7 +149,7 @@
 		margin: 0;
 	}
 	@at-root #{&}-_5 {
-		margin: 0.5em;
+		margin: .5em;
 	}
 	@at-root #{&}-1 {
 		margin: 1em;
@@ -182,7 +182,7 @@
 		padding-top: 0;
 	}
 	@at-root #{&}-t_5 {
-		padding-top: 0.5em;
+		padding-top: .5em;
 	}
 	@at-root #{&}-t1 {
 		padding-top: 1em;
@@ -195,7 +195,7 @@
 		padding-right: 0;
 	}
 	@at-root #{&}-r_5 {
-		padding-right: 0.5em;
+		padding-right: .5em;
 	}
 	@at-root #{&}-r1 {
 		padding-right: 1em;
@@ -208,7 +208,7 @@
 		padding-bottom: 0;
 	}
 	@at-root #{&}-b_5 {
-		padding-bottom: 0.5em;
+		padding-bottom: .5em;
 	}
 	@at-root #{&}-b1 {
 		padding-bottom: 1em;
@@ -221,7 +221,7 @@
 		padding-left: 0;
 	}
 	@at-root #{&}-l_5 {
-		padding-left: 0.5em;
+		padding-left: .5em;
 	}
 	@at-root #{&}-l1 {
 		padding-left: 1em;
@@ -234,7 +234,7 @@
 		padding: 0;
 	}
 	@at-root #{&}-_5 {
-		padding: 0.5em;
+		padding: .5em;
 	}
 	@at-root #{&}-1 {
 		padding: 1em;
@@ -249,15 +249,14 @@
 	//Colors
 	@at-root #{&}-red {
 		color: $red;
-
 	}
 	@at-root #{&}-blue {
 		color: $blue;
 	}
 	@at-root #{&}-white {
-		color: #fff;
+		color: $white;
 		a {
-			color: #fff;
+			color: $white;
 		}
 	}
 	@at-root #{&}-gray {
@@ -281,9 +280,6 @@
 		font-size: 1em;
 	}
 	//Weights
-	@at-root #{&}-medium {
-		font-weight: 500;
-	}
 	@at-root #{&}-normal {
 		font-weight: 400;
 	}
