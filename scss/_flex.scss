@@ -9,7 +9,7 @@
 }
 
 //Unstack and stack flexy children @ specified viewports
-@media (min-width: 384px) {
+@media (min-width: 24em) {
 	.stack-384 {
 		flex-direction: column;
 	}
@@ -17,7 +17,7 @@
 		flex-direction: row;
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 48em) {
 	.stack-768 {
 		flex-direction: column;
 	}
@@ -25,7 +25,7 @@
 		flex-direction: row;
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
 	.stack-1024 {
 		flex-direction: column;
 	}
@@ -33,7 +33,7 @@
 		flex-direction: row;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 80em) {
 	.stack-1280 {
 		flex-direction: column;
 	}
@@ -41,7 +41,7 @@
 		flex-direction: row;
 	}
 }
-@media (min-width: 1440px) {
+@media (min-width: 90em) {
 	.stack-1440 {
 		flex-direction: column;
 	}
@@ -84,7 +84,6 @@
 		}
 	}
 }
-
 
 //Make flexy children grow to fill as much of their parent container along main axis as possible
 .grow {
